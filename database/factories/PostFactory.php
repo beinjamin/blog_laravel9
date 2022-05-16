@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
             "title" => $this->faker->sentence(rand(1,4), true),
-            "content" => $this->faker->sentence(rand(2))
+            "content" => $this->faker->sentence(rand(2)),
         ];
     }
 }
