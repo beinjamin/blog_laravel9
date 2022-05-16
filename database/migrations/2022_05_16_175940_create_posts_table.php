@@ -15,7 +15,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('')->nullable()->default('une jolie description');
+            $table->boolean('online')->default(false);
             $table->timestamps();
+
+
+            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(cate::class);
+
+
         });
     }
 
