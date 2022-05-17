@@ -13,7 +13,9 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('posts',PostController::class);
+Route::get('/', [PostController::class,'index'])->name('posts.index');
+Route::resource('posts',PostController::class)->except('index');
+
 
 
 Route::get('/', function () {
