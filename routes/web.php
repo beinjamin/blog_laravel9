@@ -18,6 +18,3 @@ Route::resource('posts',PostController::class)->except('index');
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
